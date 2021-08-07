@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="MIT"
+[[mods]]
+    modId="morefood"
+    version="${file.jarVersion}"
+    displayName="More Food"
+    authors="LegibleSleet827"
+    description='''
+    This mod adds more food to minecraft
+    '''
+
+[[dependencies.morefood]]
+    modId="forge"
+    mandatory=true
+    versionRange="[37,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.morefood]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.17.1,1.18)"
+    ordering="NONE"
+    side="BOTH"
