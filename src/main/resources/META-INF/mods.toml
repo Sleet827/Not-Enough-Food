@@ -7,7 +7,7 @@ license="MIT"
     displayName="More Food"
     authors="LegibleSleet827"
     description='''
-    This mod adds more food to minecraft
+    This mod adds more food to minecraft, ranging from small things like chicken nuggets, to big ones like burgers and pizzas.
     '''
 
 [[dependencies.morefood]]
