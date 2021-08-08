@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 public class MoreFood {
     public static final String MODID = "morefood";
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public MoreFood() {
         Registration.init();

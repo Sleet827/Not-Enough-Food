@@ -3,6 +3,7 @@ package net.legiblesleet827.morefood.data.client;
 import net.legiblesleet827.morefood.MoreFood;
 import net.legiblesleet827.morefood.setup.ModItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -21,6 +22,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("layer0", "item/burger_bun_top")
                 .override().predicate(SIDE_PROPERTY, 0).model(createBurgerBunModel("top")).end()
                 .override().predicate(SIDE_PROPERTY, 1).model(createBurgerBunModel("bottom")).end();
+
+        singleTexture(ModItems.BURGER.get().getRegistryName().getPath(),
+                new ResourceLocation("item/generated"),
+                "layer0",
+                new ResourceLocation(MoreFood.MODID, "item/burger"));
     }
 
     private ItemModelBuilder createBurgerBunModel(String suffix) {

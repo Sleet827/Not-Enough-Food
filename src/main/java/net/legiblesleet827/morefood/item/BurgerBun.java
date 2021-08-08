@@ -12,6 +12,7 @@ import net.minecraft.world.level.Level;
 public class BurgerBun extends Item {
     public BurgerBun() {
         super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD));
+        new ItemStack(this).getOrCreateTag().putInt("side", 0);
     }
 
     @Override
