@@ -47,7 +47,7 @@ public class BurgerCrafting extends CustomRecipe {
 
     @Override
     public boolean canCraftInDimensions(int int1, int int2) {
-        return int1 >= 2 && int2 >= 3;
+        return int1 >= 3 && int2 >= 3;
     }
 
     @Override

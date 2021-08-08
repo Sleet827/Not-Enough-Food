@@ -20,7 +20,7 @@ public class Registration {
         RECIPE_SERIALIZERS.register(bus);
 
         ModItems.init();
-        ModRecipes.init();
+        ModRecipes.Serializers.init();
     }
 
     private static <T extends IForgeRegistryEntry<T>> DeferredRegister<T> create(IForgeRegistry<T> registry) {

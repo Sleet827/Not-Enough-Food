@@ -1,4 +1,7 @@
 affc5f0550f104b065784b4f83c94b9123a7a35b assets/morefood/models/item/burger_bun.json
 7a9392677b12dbe6e785bedb1bb751053c1ba32f assets/morefood/models/item/burger_bun_bottom.json
 f6b692de5932333c5e661ccd4d972a141773c9ce assets/morefood/models/item/burger_bun_top.json
+7ac3c3e82410e4274ee9e7908e802198f07f7fdc data/morefood/advancements/recipes/food/burger_bun.json
+3001e598f9d090259d7c093922a7780535d4ed12 data/morefood/recipes/burger_bun.json
+0bce79164e9fa0759b8fb4e7eac3ef83f66f2f05 data/morefood/recipes/burger_crafting.json
 bda3f6df3a4cf88091250fd6e3f0743a5edb5d86 data/morefood/tags/items/cooked_meat.json
