@@ -11,10 +11,14 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 @Mod.EventBusSubscriber(modid = MoreFood.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
     @SubscribeEvent
-    public void gatherDataEvent(GatherDataEvent event) {
+    public static void gatherDataEvent(GatherDataEvent event) {
         DataGenerator gen = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
+
+        gen.addProvider(new ModItemTagsProvider(gen, existingFileHelper));
+
+        gen.addProvider(new ModRecipeProvider(gen));
     }
 }

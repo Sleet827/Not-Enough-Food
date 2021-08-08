@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 
 public class BurgerBun extends Item {
     public BurgerBun() {
-        super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(Foods.BREAD));
+        super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD));
     }
 
     @Override
@@ -30,4 +30,6 @@ public class BurgerBun extends Item {
     public int getSide(ItemStack stack) {
         return stack.hasTag() ? stack.getTag().getInt("side") : 0;
     }
+
+
 }

@@ -18,7 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         getBuilder(ModItems.BURGER_BUN.get().getRegistryName().getPath())
                 .parent(getExistingFile(mcLoc("item/generated")))
-                .texture("layer0", "item/bruger_bun_top")
+                .texture("layer0", "item/burger_bun_top")
                 .override().predicate(SIDE_PROPERTY, 0).model(createBurgerBunModel("top")).end()
                 .override().predicate(SIDE_PROPERTY, 1).model(createBurgerBunModel("bottom")).end();
     }

@@ -1,0 +1,20 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "morefood:item/burger_bun_top"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "morefood:side": 0.0
+      },
+      "model": "morefood:item/burger_bun_top"
+    },
+    {
+      "predicate": {
+        "morefood:side": 1.0
+      },
+      "model": "morefood:item/burger_bun_bottom"
+    }
+  ]
+}
