@@ -1,7 +1,6 @@
 package net.legiblesleet827.morefood.setup;
 
 import net.legiblesleet827.morefood.MoreFood;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
