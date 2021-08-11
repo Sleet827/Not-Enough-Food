@@ -27,6 +27,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/generated"),
                 "layer0",
                 new ResourceLocation(MoreFood.MODID, "item/burger"));
+
+        singleTexture(ModItems.PIZZA_ITEM.get().getRegistryName().getPath(),
+                new ResourceLocation("item/generated"),
+                "layer0",
+                new ResourceLocation(MoreFood.MODID, "item/pizza"));
     }
 
     private ItemModelBuilder createBurgerBunModel(String suffix) {

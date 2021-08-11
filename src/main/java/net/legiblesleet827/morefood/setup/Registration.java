@@ -12,15 +12,17 @@ import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
 public class Registration {
-    public static final DeferredRegister<Item> ITEMS = create(ForgeRegistries.ITEMS);
     public static final DeferredRegister<Block> BLOCKS = create(ForgeRegistries.BLOCKS);
+    public static final DeferredRegister<Item> ITEMS = create(ForgeRegistries.ITEMS);
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = create(ForgeRegistries.RECIPE_SERIALIZERS);
 
     public static void init() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        BLOCKS.register(bus);
         ITEMS.register(bus);
         RECIPE_SERIALIZERS.register(bus);
 
+        ModBlocks.init();
         ModItems.init();
         ModRecipes.Serializers.init();
     }

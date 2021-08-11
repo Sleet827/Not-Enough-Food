@@ -1,6 +1,7 @@
 package net.legiblesleet827.morefood.data;
 
 import net.legiblesleet827.morefood.MoreFood;
+import net.legiblesleet827.morefood.data.client.ModBlockStateProvider;
 import net.legiblesleet827.morefood.data.client.ModItemModelProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -15,6 +16,7 @@ public class DataGenerators {
         DataGenerator gen = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
+        gen.addProvider(new ModBlockStateProvider(gen, existingFileHelper));
         gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
 
         gen.addProvider(new ModItemTagsProvider(gen, existingFileHelper));
