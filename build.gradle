@@ -13,15 +13,20 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0'
-group = 'net.legiblesleet827.morefood'
-archivesBaseName = 'morefood'
+version = project.version
+group = project.group
+archivesBaseName = project.archivesBaseName
+
+def gpr_creds = {
+    username = property('gpr.username')
+    password = property('gpr.token')
+}
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(16)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.17.1'
+    mappings channel: project.mappings_channel.toString(), version: project.mappings_version.toString()
 
     runs {
         client {
@@ -32,7 +37,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                morefood {
+                platinum {
                     source sourceSets.main
                 }
             }
@@ -46,7 +51,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                morefood {
+                platinum {
                     source sourceSets.main
                 }
             }
@@ -59,13 +64,13 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'morefood', '--all',
+            args '--mod', project.mod_id, '--all',
                     '--existing', file("src/main/resources").toString(),
                     '--existing', file("src/generated/resources").toString(),
                     '--output', file("src/generated/resources/")
 
             mods {
-                morefood {
+                platinum {
                     source sourceSets.main
                 }
             }
@@ -79,34 +84,46 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.0.32'
+    minecraft "net.minecraftforge:forge:${project.forge_version}"
 }
 
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "morefood",
+                "Specification-Title"     : project.name,
                 "Specification-Vendor"    : "LegibleSleet827",
                 "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,
-                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Version"  : "${project.mc_version}-${project.version}",
                 "Implementation-Vendor"   : "LegibleSleet827",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }
 
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allJava
+}
+
+artifacts {
+    archives sourcesJar
+}
+
 jar.finalizedBy('reobfJar')
 
 publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact jar
-        }
-    }
     repositories {
         maven {
-            url "file://${project.projectDir}/mcmodsrepo"
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/hackcoder1000/${project.repoName}")
+            credentials gpr_creds
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+            artifact sourcesJar
         }
     }
 }

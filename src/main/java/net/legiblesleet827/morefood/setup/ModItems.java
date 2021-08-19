@@ -7,6 +7,12 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.fmllegacy.RegistryObject;
 
 public class ModItems {
+    public static final RegistryObject<Item> CHICKEN_NUGGET = Registration.ITEMS.register("chicken_nugget", () ->
+            new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.RAW_CHICKEN_NUGGET)));
+    public static final RegistryObject<Item> COOKED_CHICKEN_NUGGET = Registration.ITEMS.register("cooked_chicken_nugget", () ->
+            new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.COOKED_CHICKEN_NUGGET)));
+    public static final RegistryObject<Item> CHEESE = Registration.ITEMS.register("cheese", () ->
+            new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.CHEESE)));
     public static final RegistryObject<BurgerBun> BURGER_BUN = Registration.ITEMS.register("burger_bun", BurgerBun::new);
     public static final RegistryObject<Item> BURGER = Registration.ITEMS.register("burger", () ->
             new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.BURGER)));
