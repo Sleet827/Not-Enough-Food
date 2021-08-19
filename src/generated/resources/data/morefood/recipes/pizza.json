@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "morefood",
+  "pattern": [
+    "C",
+    "c",
+    "b"
+  ],
+  "key": {
+    "C": {
+      "tag": "morefood:cooked_meat"
+    },
+    "c": {
+      "item": "morefood:cheese"
+    },
+    "b": {
+      "item": "minecraft:bread"
+    }
+  },
+  "result": {
+    "item": "morefood:pizza"
+  }
+}

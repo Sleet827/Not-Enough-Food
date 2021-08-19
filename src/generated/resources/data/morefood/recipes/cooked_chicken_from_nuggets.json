@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "morefood",
+  "pattern": [
+    "nnn",
+    "nnn",
+    "nnn"
+  ],
+  "key": {
+    "n": {
+      "item": "morefood:cooked_chicken_nugget"
+    }
+  },
+  "result": {
+    "item": "minecraft:cooked_chicken"
+  }
+}

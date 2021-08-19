@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "morefood:cooked_chicken_nugget_smelting"
+    ]
+  },
+  "criteria": {
+    "has_chicken_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:nuggets/chicken"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "morefood:cooked_chicken_nugget_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_chicken_nugget",
+      "has_the_recipe"
+    ]
+  ]
+}
