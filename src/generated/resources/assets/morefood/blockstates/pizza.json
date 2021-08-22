@@ -1,7 +1,7 @@
 {
   "variants": {
     "bites=0": {
-      "model": "morefood:block/pizza"
+      "model": "morefood:block/pizza_slice0"
     },
     "bites=1": {
       "model": "morefood:block/pizza_slice1"

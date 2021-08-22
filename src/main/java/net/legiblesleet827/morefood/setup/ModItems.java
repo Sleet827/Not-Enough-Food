@@ -17,7 +17,7 @@ public class ModItems {
     public static final RegistryObject<Item> BURGER = Registration.ITEMS.register("burger", () ->
             new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.BURGER)));
     public static final RegistryObject<BlockItem> PIZZA_ITEM = Registration.ITEMS.register("pizza", () ->
-            new BlockItem(ModBlocks.PIZZA_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
+            new BlockItem(ModBlocks.PIZZA.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
 
     static void init() {}
 }

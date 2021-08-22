@@ -9,7 +9,7 @@ import net.minecraft.world.level.material.Material;
 import net.minecraftforge.fmllegacy.RegistryObject;
 
 public class ModBlocks {
-    public static final RegistryObject<PizzaBlock> PIZZA_BLOCK = Registration.BLOCKS.register("pizza", PizzaBlock::new);
+    public static final RegistryObject<PizzaBlock> PIZZA = Registration.BLOCKS.register("pizza", PizzaBlock::new);
 
     static void init() {}
 }

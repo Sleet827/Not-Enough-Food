@@ -22,5 +22,6 @@ public class DataGenerators {
         gen.addProvider(new ModItemTagsProvider(gen, existingFileHelper));
 
         gen.addProvider(new ModRecipeProvider(gen));
+        gen.addProvider(new ModLootTableProvider(gen));
     }
 }

@@ -1,6 +1,7 @@
 package net.legiblesleet827.morefood.setup;
 
 import net.legiblesleet827.morefood.MoreFood;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
@@ -15,6 +16,7 @@ public class Registration {
     public static final DeferredRegister<Block> BLOCKS = create(ForgeRegistries.BLOCKS);
     public static final DeferredRegister<Item> ITEMS = create(ForgeRegistries.ITEMS);
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = create(ForgeRegistries.RECIPE_SERIALIZERS);
+    public static final DeferredRegister<EntityType<?>> ENTITIES = create(ForgeRegistries.ENTITIES);
 
     public static void init() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
