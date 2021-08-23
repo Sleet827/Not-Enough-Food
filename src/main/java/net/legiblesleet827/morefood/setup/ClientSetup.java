@@ -4,9 +4,11 @@ import net.legiblesleet827.morefood.MoreFood;
 import net.legiblesleet827.morefood.entity.turkey.TurkeyModel;
 import net.legiblesleet827.morefood.entity.turkey.TurkeyRenderer;
 import net.legiblesleet827.morefood.item.BurgerBun;
+import net.legiblesleet827.morefood.item.TurkeySpawnEggItem;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,5 +37,10 @@ public class ClientSetup {
     @SubscribeEvent
     public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.TURKEY.get(), TurkeyRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void onItemColor(ColorHandlerEvent.Item event) {
+        event.getItemColors().register((stack, i) -> TurkeySpawnEggItem.getColor(i), ModItems.TURKEY_SPAWN_EGG.get());
     }
 }

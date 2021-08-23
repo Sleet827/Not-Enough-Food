@@ -2,16 +2,18 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "morefood:cooked_chicken_nugget_campfire_cooking"
+      "morefood:turkey_smoking"
     ]
   },
   "criteria": {
-    "has_chicken_nugget": {
+    "has_turkey": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "tag": "forge:nuggets/chicken"
+            "items": [
+              "morefood:turkey"
+            ]
           }
         ]
       }
@@ -19,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "morefood:cooked_chicken_nugget_campfire_cooking"
+        "recipe": "morefood:turkey_smoking"
       }
     }
   },
   "requirements": [
     [
-      "has_chicken_nugget",
+      "has_turkey",
       "has_the_recipe"
     ]
   ]

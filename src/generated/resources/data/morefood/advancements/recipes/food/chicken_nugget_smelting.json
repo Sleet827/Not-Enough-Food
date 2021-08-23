@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "morefood:cooked_chicken_nugget_smoking"
+      "morefood:chicken_nugget_smelting"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "morefood:cooked_chicken_nugget_smoking"
+        "recipe": "morefood:chicken_nugget_smelting"
       }
     }
   },

@@ -1,6 +1,7 @@
 package net.legiblesleet827.morefood.setup;
 
 import net.legiblesleet827.morefood.item.BurgerBun;
+import net.legiblesleet827.morefood.item.TurkeySpawnEggItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -23,8 +24,7 @@ public class ModItems {
             new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.BURGER)));
     public static final RegistryObject<BlockItem> PIZZA = Registration.ITEMS.register("pizza", () ->
             new BlockItem(ModBlocks.PIZZA.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
-    public static final RegistryObject<Item> TURKEY_SPAWN_EGG = Registration.ITEMS.register("turkey_spawn_egg", () ->
-            new SpawnEggItem(ModEntities.TURKEY.get(), 	9849600, 16776960, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<Item> TURKEY_SPAWN_EGG = Registration.ITEMS.register("turkey_spawn_egg", TurkeySpawnEggItem::new);
 
     static void init() {}
 }
