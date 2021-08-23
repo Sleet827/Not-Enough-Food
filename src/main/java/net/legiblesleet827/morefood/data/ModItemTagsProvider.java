@@ -19,6 +19,6 @@ public class ModItemTagsProvider extends ItemTagsProvider{
     protected void addTags() {
         tag(ModTags.Items.NUGGETS_CHICKEN).add(ModItems.CHICKEN_NUGGET.get());
         tag(Tags.Items.NUGGETS).addTags(ModTags.Items.NUGGETS_CHICKEN);
-        tag(ModTags.Items.COOKED_MEAT).add(Items.COOKED_BEEF).add(Items.COOKED_COD).add(Items.COOKED_CHICKEN).add(Items.COOKED_MUTTON).add(Items.COOKED_RABBIT).add(Items.COOKED_PORKCHOP).add(Items.COOKED_SALMON);
+        tag(ModTags.Items.COOKED_MEAT).add(Items.COOKED_BEEF).add(Items.COOKED_COD).add(Items.COOKED_CHICKEN).add(ModItems.COOKED_TURKEY.get()).add(Items.COOKED_MUTTON).add(Items.COOKED_RABBIT).add(Items.COOKED_PORKCHOP).add(Items.COOKED_SALMON);
     }
 }
