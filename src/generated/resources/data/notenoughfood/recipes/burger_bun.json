@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "notenoughfood",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "item": "notenoughfood:burger_bun",
+    "count": 2
+  }
+}

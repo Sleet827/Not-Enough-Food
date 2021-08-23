@@ -2,23 +2,23 @@ modLoader="javafml"
 loaderVersion="[37,)"
 license="MIT"
 [[mods]]
-    modId="morefood"
+    modId="notenoughfood"
     version="${file.jarVersion}"
-    displayName="More Food"
+    displayName="Not Enough Food"
     authors="LegibleSleet827"
     logoFile="logo.png"
     description='''
     This mod adds more food to minecraft, ranging from small things like chicken nuggets, to big ones like burgers and pizzas.
     '''
 
-[[dependencies.morefood]]
+[[dependencies.notenoughfood]]
     modId="forge"
     mandatory=true
     versionRange="[37,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.morefood]]
+[[dependencies.notenoughfood]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.17.1,1.18)"

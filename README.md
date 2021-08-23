@@ -29,7 +29,7 @@ Then in your `repositories` block, add this:
 
 ```groovy
 maven {
-    url = uri("https://maven.pkg.github.com/hackcoder1000/more-food")
+    url = uri("https://maven.pkg.github.com/hackcoder1000/not-enough-food")
     credentials gpr_creds
 }
 ```
@@ -37,7 +37,7 @@ maven {
 Finally, in your `dependencies` block, add this line of code:
 
 ```groovy
-compileOnly fg.deobf("net.legiblesleet827:more-food:VERSION") {
+compileOnly fg.deobf("net.legiblesleet827:not-enough-food:VERSION") {
     exclude module: 'forge'
 }
 ```

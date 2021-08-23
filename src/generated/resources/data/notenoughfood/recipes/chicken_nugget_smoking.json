@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "group": "notenoughfood",
+  "ingredient": {
+    "item": "notenoughfood:chicken_nugget"
+  },
+  "result": "notenoughfood:cooked_chicken_nugget",
+  "experience": 0.7,
+  "cookingtime": 100
+}
