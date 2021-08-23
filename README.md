@@ -29,7 +29,7 @@ Then in your `repositories` block, add this:
 
 ```groovy
 maven {
-    url = uri("https://maven.pkg.github.com/hackcoder1000/${project.repoName}")
+    url = uri("https://maven.pkg.github.com/hackcoder1000/more-food")
     credentials gpr_creds
 }
 ```
