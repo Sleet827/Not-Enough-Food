@@ -1,4 +1,4 @@
-package net.legiblesleet827.notenoughfood.data;
+package net.legiblesleet827.notenoughfood.datagen;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;

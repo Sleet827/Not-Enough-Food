@@ -1,4 +1,4 @@
-package net.legiblesleet827.notenoughfood.data.client;
+package net.legiblesleet827.notenoughfood.datagen.client;
 
 import net.legiblesleet827.notenoughfood.NotEnoughFood;
 import net.legiblesleet827.notenoughfood.setup.ModItems;

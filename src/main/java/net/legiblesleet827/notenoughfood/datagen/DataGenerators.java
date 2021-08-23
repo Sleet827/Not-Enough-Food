@@ -1,8 +1,9 @@
-package net.legiblesleet827.notenoughfood.data;
+package net.legiblesleet827.notenoughfood.datagen;
 
 import net.legiblesleet827.notenoughfood.NotEnoughFood;
-import net.legiblesleet827.notenoughfood.data.client.ModBlockStateProvider;
-import net.legiblesleet827.notenoughfood.data.client.ModItemModelProvider;
+import net.legiblesleet827.notenoughfood.datagen.client.ModBlockStateProvider;
+import net.legiblesleet827.notenoughfood.datagen.client.ModItemModelProvider;
+import net.legiblesleet827.notenoughfood.datagen.client.ModLanguageProviderEN;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,6 +17,7 @@ public class DataGenerators {
         DataGenerator gen = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
+        gen.addProvider(new ModLanguageProviderEN(gen));
         gen.addProvider(new ModBlockStateProvider(gen, existingFileHelper));
         gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
 
