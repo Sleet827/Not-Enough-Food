@@ -1,0 +1,12 @@
+{
+  "block.notenoughfood.pizza": "Pizza",
+  "entity.notenoughfood.turkey": "Turkey",
+  "item.notenoughfood.burger": "Burger",
+  "item.notenoughfood.burger_bun": "Burger Bun",
+  "item.notenoughfood.cheese": "Cheese",
+  "item.notenoughfood.chicken_nugget": "Chicken Nugget",
+  "item.notenoughfood.cooked_chicken_nugget": "Cooked Chicken Nugget",
+  "item.notenoughfood.cooked_turkey": "Cooked Turkey",
+  "item.notenoughfood.turkey": "Raw Turkey",
+  "item.notenoughfood.turkey_spawn_egg": "Turkey Spawn Egg"
+}
