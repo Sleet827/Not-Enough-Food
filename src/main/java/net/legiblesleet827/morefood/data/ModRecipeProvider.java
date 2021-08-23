@@ -19,7 +19,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-        ShapedRecipeBuilder.shaped(ModItems.PIZZA_ITEM.get())
+        ShapedRecipeBuilder.shaped(ModItems.PIZZA.get())
                 .define('C', ModTags.Items.COOKED_MEAT)
                 .define('c', ModItems.CHEESE.get())
                 .define('b', Items.BREAD)
@@ -48,13 +48,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("morefood")
                 .save(consumer, modId("cooked_chicken_from_nuggets"));
 
-        ShapelessRecipeBuilder.shapeless(ModItems.CHICKEN_NUGGET.get())
+        ShapelessRecipeBuilder.shapeless(ModItems.CHICKEN_NUGGET.get(), 9)
                 .requires(Items.CHICKEN)
                 .unlockedBy("has_chicken", has(Items.CHICKEN))
                 .group("morefood")
                 .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(ModItems.COOKED_CHICKEN_NUGGET.get())
+        ShapelessRecipeBuilder.shapeless(ModItems.COOKED_CHICKEN_NUGGET.get(), 9)
                 .requires(Items.COOKED_CHICKEN)
                 .unlockedBy("has_cooked_chicken", has(Items.COOKED_CHICKEN))
                 .group("morefood")
@@ -77,17 +77,32 @@ public class ModRecipeProvider extends RecipeProvider {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.CHICKEN_NUGGET.get()), ModItems.COOKED_CHICKEN_NUGGET.get(), 0.7F, 200)
                 .unlockedBy("has_chicken_nugget", has(ModTags.Items.NUGGETS_CHICKEN))
                 .group("morefood")
-                .save(consumer, modId("cooked_chicken_nugget_smelting"));
+                .save(consumer, modId("chicken_nugget_smelting"));
 
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.CHICKEN_NUGGET.get()), ModItems.COOKED_CHICKEN_NUGGET.get(), 0.7F, 100)
                 .unlockedBy("has_chicken_nugget", has(ModTags.Items.NUGGETS_CHICKEN))
                 .group("morefood")
-                .save(consumer, modId("cooked_chicken_nugget_smoking"));
+                .save(consumer, modId("chicken_nugget_smoking"));
 
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.CHICKEN_NUGGET.get()), ModItems.COOKED_CHICKEN_NUGGET.get(), 0.7F, 100)
                 .unlockedBy("has_chicken_nugget", has(ModTags.Items.NUGGETS_CHICKEN))
                 .group("morefood")
-                .save(consumer, modId("cooked_chicken_nugget_campfire_cooking"));
+                .save(consumer, modId("chicken_nugget_campfire_cooking"));
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.TURKEY.get()), ModItems.COOKED_TURKEY.get(), 0.7F, 200)
+                .unlockedBy("has_turkey", has(ModItems.TURKEY.get()))
+                .group("morefood")
+                .save(consumer, modId("turkey_smelting"));
+
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.TURKEY.get()), ModItems.COOKED_TURKEY.get(), 0.7F, 100)
+                .unlockedBy("has_turkey", has(ModItems.TURKEY.get()))
+                .group("morefood")
+                .save(consumer, modId("turkey_smoking"));
+
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(ModItems.TURKEY.get()), ModItems.COOKED_TURKEY.get(), 0.7F, 100)
+                .unlockedBy("has_turkey", has(ModItems.TURKEY.get()))
+                .group("morefood")
+                .save(consumer, modId("turkey_campfire_cooking"));
     }
 
     private static ResourceLocation modId(String path) {

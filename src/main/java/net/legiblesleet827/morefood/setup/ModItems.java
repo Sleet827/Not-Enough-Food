@@ -4,6 +4,7 @@ import net.legiblesleet827.morefood.item.BurgerBun;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraftforge.fmllegacy.RegistryObject;
 
 public class ModItems {
@@ -13,11 +14,17 @@ public class ModItems {
             new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.COOKED_CHICKEN_NUGGET)));
     public static final RegistryObject<Item> CHEESE = Registration.ITEMS.register("cheese", () ->
             new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.CHEESE)));
+    public static final RegistryObject<Item> TURKEY = Registration.ITEMS.register("turkey", () ->
+            new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.TURKEY)));
+    public static final RegistryObject<Item> COOKED_TURKEY = Registration.ITEMS.register("cooked_turkey", () ->
+            new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.COOKED_TURKEY)));
     public static final RegistryObject<BurgerBun> BURGER_BUN = Registration.ITEMS.register("burger_bun", BurgerBun::new);
     public static final RegistryObject<Item> BURGER = Registration.ITEMS.register("burger", () ->
             new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.BURGER)));
-    public static final RegistryObject<BlockItem> PIZZA_ITEM = Registration.ITEMS.register("pizza", () ->
+    public static final RegistryObject<BlockItem> PIZZA = Registration.ITEMS.register("pizza", () ->
             new BlockItem(ModBlocks.PIZZA.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<Item> TURKEY_SPAWN_EGG = Registration.ITEMS.register("turkey_spawn_egg", () ->
+            new SpawnEggItem(ModEntities.TURKEY.get(), 	9849600, 16776960, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     static void init() {}
 }

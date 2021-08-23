@@ -7,6 +7,7 @@
     }
   ],
   "result": {
-    "item": "morefood:cooked_chicken_nugget"
+    "item": "morefood:cooked_chicken_nugget",
+    "count": 9
   }
 }

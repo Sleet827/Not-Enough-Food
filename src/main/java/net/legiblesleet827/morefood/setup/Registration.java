@@ -23,10 +23,12 @@ public class Registration {
         BLOCKS.register(bus);
         ITEMS.register(bus);
         RECIPE_SERIALIZERS.register(bus);
+        ENTITIES.register(bus);
 
         ModBlocks.init();
         ModItems.init();
         ModRecipes.Serializers.init();
+        ModEntities.init();
     }
 
     private static <T extends IForgeRegistryEntry<T>> DeferredRegister<T> create(IForgeRegistry<T> registry) {
