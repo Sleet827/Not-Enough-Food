@@ -6,6 +6,7 @@ license="MIT"
     version="${file.jarVersion}"
     displayName="More Food"
     authors="LegibleSleet827"
+    logoFile="logo.png"
     description='''
     This mod adds more food to minecraft, ranging from small things like chicken nuggets, to big ones like burgers and pizzas.
     '''
