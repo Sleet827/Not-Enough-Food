@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "nef:chicken_nugget"
+  },
+  "result": "nef:cooked_chicken_nugget",
+  "experience": 0.7,
+  "cookingtime": 100
+}
