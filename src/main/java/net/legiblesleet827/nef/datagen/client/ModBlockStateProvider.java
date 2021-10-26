@@ -4,6 +4,7 @@ import net.legiblesleet827.nef.NotEnoughFood;
 import net.legiblesleet827.nef.setup.Registration;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -22,6 +23,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     int bites = state.getValue(BlockStateProperties.BITES);
                     return ConfiguredModel.builder().modelFile(createPizzaSliceModel(bites)).build();
                 });
+
+
     }
 
     private BlockModelBuilder createPizzaSliceModel(int bites) {

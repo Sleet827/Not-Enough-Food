@@ -1,0 +1,97 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.turkey",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "turkey",
+					"pivot": [2, 2, -2]
+				},
+				{
+					"name": "body",
+					"parent": "turkey",
+					"pivot": [2, 2, -2],
+					"cubes": [
+						{"origin": [-2, 3, -4], "size": [5, 4, 5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "turkey",
+					"pivot": [2, 2, -2],
+					"cubes": [
+						{"origin": [-0.5, 6, -7], "size": [2, 2, 2], "uv": [8, 9]},
+						{"origin": [0, 6, -8], "size": [1, 1, 1], "uv": [0, 19]},
+						{"origin": [0, 4, -6], "size": [1, 2, 1], "uv": [16, 17]},
+						{"origin": [0, 4, -5], "size": [1, 1, 1], "uv": [19, 0]}
+					]
+				},
+				{
+					"name": "wings",
+					"parent": "turkey",
+					"pivot": [2, 2, -2]
+				},
+				{
+					"name": "left_wing",
+					"parent": "wings",
+					"pivot": [-2.45638, 5.03347, -1.5],
+					"rotation": [0, 0, 15],
+					"cubes": [
+						{"origin": [-2.45638, 3.53347, -2.5], "size": [0, 3, 2], "uv": [4, 14]}
+					]
+				},
+				{
+					"name": "right_wing",
+					"parent": "wings",
+					"pivot": [3.44615, 5.11112, -1.5],
+					"rotation": [0, 0, -15],
+					"cubes": [
+						{"origin": [3.44615, 3.61112, -2.5], "size": [0, 3, 2], "uv": [0, 14]}
+					]
+				},
+				{
+					"name": "legs",
+					"parent": "turkey",
+					"pivot": [1, 2, 0]
+				},
+				{
+					"name": "left_leg",
+					"parent": "legs",
+					"pivot": [-0.5, 0.75, -2],
+					"cubes": [
+						{"origin": [-1, 0, -2], "size": [1, 3, 1], "uv": [16, 13]},
+						{"origin": [-1, 0, -3], "size": [1, 0, 1], "uv": [2, 0]}
+					]
+				},
+				{
+					"name": "right_leg",
+					"parent": "legs",
+					"pivot": [1.5, 0.75, -2],
+					"cubes": [
+						{"origin": [1, 0, -2], "size": [1, 3, 1], "uv": [16, 9]},
+						{"origin": [1, 0, -3], "size": [1, 0, 1], "uv": [6, 9]}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "turkey",
+					"pivot": [8, 2, 2],
+					"rotation": [-7.5, 0, 0],
+					"cubes": [
+						{"origin": [2, 4.00856, 0.63053], "size": [1, 5, 1], "uv": [12, 13]},
+						{"origin": [-1, 4.00856, 0.63053], "size": [3, 6, 1], "uv": [0, 9]},
+						{"origin": [-2, 4.00856, 0.63053], "size": [1, 5, 1], "uv": [8, 13]}
+					]
+				}
+			]
+		}
+	]
+}

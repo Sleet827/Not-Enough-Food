@@ -118,25 +118,24 @@ import javax.annotation.Nullable;
 public class TurkeyModel extends AnimatedGeoModel<Turkey> {
 	@Override
 	public ResourceLocation getModelLocation(Turkey object) {
-		return new ResourceLocation(NotEnoughFood.MODID, "geo/entity/turkey.geo.json");
+		if (object.getAge() < 0) {
+			return new ResourceLocation(NotEnoughFood.MODID, "geo/entity/baby_turkey.geo.json");
+		} else {
+			return new ResourceLocation(NotEnoughFood.MODID, "geo/entity/turkey.geo.json");
+		}
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(Turkey object) {
-		return new ResourceLocation(NotEnoughFood.MODID, "textures/entity/turkey.png");
+		if (object.getAge() < 0) {
+			return new ResourceLocation(NotEnoughFood.MODID, "textures/entity/baby_turkey.png");
+		} else {
+			return new ResourceLocation(NotEnoughFood.MODID, "textures/entity/turkey.png");
+		}
 	}
 
 	@Override
 	public ResourceLocation getAnimationFileLocation(Turkey animatable) {
 		return new ResourceLocation(NotEnoughFood.MODID, "animations/entity/turkey.animation.json");
-	}
-
-	@Override
-	public void setLivingAnimations(Turkey entity, Integer uniqueID, @Nullable AnimationEvent customPredicate) {
-		if (entity.getAge() == -24000) {
-			this.getAnimationProcessor().getBone("turkey").setScaleX((float) 0.25);
-			this.getAnimationProcessor().getBone("turkey").setScaleY((float) 0.25);
-			this.getAnimationProcessor().getBone("turkey").setScaleZ((float) 0.25);
-		}
 	}
 }
