@@ -3,7 +3,6 @@ package net.legiblesleet827.nef.setup;
 import net.legiblesleet827.nef.NotEnoughFood;
 import net.legiblesleet827.nef.entity.turkey.TurkeyRenderer;
 import net.legiblesleet827.nef.item.BurgerBun;
-import net.legiblesleet827.nef.item.TurkeySpawnEggItem;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -28,12 +27,8 @@ public class ClientSetup {
                 (stack, level, entity, damage) -> item.getSide(stack));
     }
 
+    @SubscribeEvent
     public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(Registration.TURKEY.get(), TurkeyRenderer::new);
-    }
-
-    @SubscribeEvent
-    public static void onItemColor(ColorHandlerEvent.Item event) {
-        event.getItemColors().register((stack, i) -> TurkeySpawnEggItem.getColor(i), Registration.TURKEY_SPAWN_EGG.get());
     }
 }

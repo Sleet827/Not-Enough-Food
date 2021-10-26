@@ -4,7 +4,6 @@ import net.legiblesleet827.nef.NotEnoughFood;
 import net.legiblesleet827.nef.block.PizzaBlock;
 import net.legiblesleet827.nef.entity.turkey.Turkey;
 import net.legiblesleet827.nef.item.BurgerBun;
-import net.legiblesleet827.nef.item.TurkeySpawnEggItem;
 import net.legiblesleet827.nef.item.crafting.BurgerCrafting;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -14,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SimpleRecipeSerializer;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -57,7 +57,8 @@ public class Registration {
             new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.BURGER)));
     public static final RegistryObject<BlockItem> PIZZA_ITEM = ITEMS.register("pizza", () ->
             new BlockItem(PIZZA.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
-    public static final RegistryObject<Item> TURKEY_SPAWN_EGG = ITEMS.register("turkey_spawn_egg", TurkeySpawnEggItem::new);
+    public static final RegistryObject<Item> TURKEY_SPAWN_EGG = ITEMS.register("turkey_spawn_egg", () ->
+            new ForgeSpawnEggItem(Registration.TURKEY, 16776960, 9849600, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<SimpleRecipeSerializer<BurgerCrafting>> BURGER_CRAFTING = RECIPE_SERIALIZERS.register("crafting_special_burger", () ->
             new SimpleRecipeSerializer<>(BurgerCrafting::new));
