@@ -10,8 +10,8 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ModItemTagsProvider extends ItemTagsProvider{
-    public ModItemTagsProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+public class ModItemTagsGenerator extends ItemTagsProvider{
+    public ModItemTagsGenerator(DataGenerator generator, ExistingFileHelper existingFileHelper) {
         super(generator, new BlockTagsProvider(generator, NotEnoughFood.MODID, existingFileHelper), NotEnoughFood.MODID, existingFileHelper);
     }
 

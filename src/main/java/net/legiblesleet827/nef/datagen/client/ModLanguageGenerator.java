@@ -6,9 +6,9 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
 
-public class ModLanguageProviderEN extends LanguageProvider {
-    public ModLanguageProviderEN(DataGenerator gen) {
-        super(gen, NotEnoughFood.MODID, "en_us");
+public class ModLanguageGenerator extends LanguageProvider {
+    public ModLanguageGenerator(DataGenerator gen) {
+        super(gen, NotEnoughFood.MODID, "en_gb");
     }
 
     @Override
