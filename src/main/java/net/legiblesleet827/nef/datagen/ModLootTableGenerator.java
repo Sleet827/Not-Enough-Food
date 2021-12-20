@@ -30,8 +30,8 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-public class ModLootTableProvider extends LootTableProvider {
-    public ModLootTableProvider(DataGenerator generator) {
+public class ModLootTableGenerator extends LootTableProvider {
+    public ModLootTableGenerator(DataGenerator generator) {
         super(generator);
     }
 

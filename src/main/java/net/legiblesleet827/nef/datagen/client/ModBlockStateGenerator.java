@@ -11,8 +11,8 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class ModBlockStateProvider extends BlockStateProvider {
-    public ModBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
+public class ModBlockStateGenerator extends BlockStateProvider {
+    public ModBlockStateGenerator(DataGenerator gen, ExistingFileHelper exFileHelper) {
         super(gen, NotEnoughFood.MODID, exFileHelper);
     }
 

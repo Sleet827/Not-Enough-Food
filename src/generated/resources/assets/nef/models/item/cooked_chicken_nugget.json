@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "nef:item/cooked_chicken_nugget"
-  }
-}

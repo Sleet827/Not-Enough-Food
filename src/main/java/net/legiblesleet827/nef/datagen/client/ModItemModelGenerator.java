@@ -9,8 +9,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 import static net.legiblesleet827.nef.setup.ClientSetup.SIDE_PROPERTY;
 
-public class ModItemModelProvider extends ItemModelProvider {
-    public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+public class ModItemModelGenerator extends ItemModelProvider {
+    public ModItemModelGenerator(DataGenerator generator, ExistingFileHelper existingFileHelper) {
         super(generator, NotEnoughFood.MODID, existingFileHelper);
     }
 
