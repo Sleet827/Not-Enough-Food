@@ -28,7 +28,21 @@ public class ModRecipeGenerator extends RecipeProvider {
                 .unlockedBy("has_cheese", has(Registration.CHEESE.get()))
                 .save(consumer);
 
-        SpecialRecipeBuilder.special(Registration.BURGER_CRAFTING.get()).save(consumer, modId("burger_crafting").toString());
+        ShapedRecipeBuilder.shaped(Items.CHICKEN)
+                .define('n', ModTags.Items.NUGGETS_CHICKEN)
+                .pattern("nnn")
+                .pattern("nnn")
+                .pattern("nnn")
+                .unlockedBy("has_chicken_nugget", has(ModTags.Items.NUGGETS_CHICKEN))
+                .save(consumer, modId("chicken_from_nuggets"));
+
+        ShapedRecipeBuilder.shaped(Items.COOKED_CHICKEN)
+                .define('n', Registration.COOKED_CHICKEN_NUGGET.get())
+                .pattern("nnn")
+                .pattern("nnn")
+                .pattern("nnn")
+                .unlockedBy("has_cooked_chicken_nugget", has(Registration.COOKED_CHICKEN_NUGGET.get()))
+                .save(consumer, modId("cooked_chicken_from_nuggets"));
 
         ShapelessRecipeBuilder.shapeless(Registration.BURGER_BUN.get(), 2)
                 .requires(Items.BREAD)
@@ -40,31 +54,17 @@ public class ModRecipeGenerator extends RecipeProvider {
                 .unlockedBy("has_milk", has(Items.MILK_BUCKET))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(Items.CHICKEN)
-                .define('n', ModTags.Items.NUGGETS_CHICKEN)
-                .pattern("nnn")
-                .pattern("nnn")
-                .pattern("nnn")
-                .unlockedBy("has_chicken_nugget", has(ModTags.Items.NUGGETS_CHICKEN))
-                .save(consumer, modId("chicken_from_nuggets"));
-
         ShapelessRecipeBuilder.shapeless(Registration.CHICKEN_NUGGET.get(), 9)
                 .requires(Items.CHICKEN)
                 .unlockedBy("has_chicken", has(Items.CHICKEN))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(Items.COOKED_CHICKEN)
-                .define('n', Registration.COOKED_CHICKEN_NUGGET.get())
-                .pattern("nnn")
-                .pattern("nnn")
-                .pattern("nnn")
-                .unlockedBy("has_cooked_chicken_nugget", has(Registration.COOKED_CHICKEN_NUGGET.get()))
-                .save(consumer, modId("cooked_chicken_from_nuggets"));
-
         ShapelessRecipeBuilder.shapeless(Registration.COOKED_CHICKEN_NUGGET.get(), 9)
                 .requires(Items.COOKED_CHICKEN)
                 .unlockedBy("has_cooked_chicken", has(Items.COOKED_CHICKEN))
                 .save(consumer);
+
+        SpecialRecipeBuilder.special(Registration.BURGER_CRAFTING.get()).save(consumer, modId("burger").toString());
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Registration.CHICKEN_NUGGET.get()), Registration.COOKED_CHICKEN_NUGGET.get(), 0.7F, 200)
                 .unlockedBy("has_chicken_nugget", has(ModTags.Items.NUGGETS_CHICKEN))

@@ -35,8 +35,8 @@ e3d48f64e744f4b6d0c6f570bdb106cd7effa54a data/nef/advancements/recipes/food/turk
 d76ecb6622a648dc24a36811adc0e861e8fa35ce data/nef/advancements/recipes/food/turkey_smoking.json
 374fc761ad454802cb3e7a484cfec94537b114d8 data/nef/loot_tables/blocks/pizza.json
 429ce947d1919cf971cbb4b4d68ce109ce17541a data/nef/loot_tables/entities/turkey.json
+bef19363d77dbb36937a03031aa2c8b993cf6010 data/nef/recipes/burger.json
 01c4a3ca0bf2c7c6177e87d2e3ab802dc16eaf6d data/nef/recipes/burger_bun.json
-bef19363d77dbb36937a03031aa2c8b993cf6010 data/nef/recipes/burger_crafting.json
 827199bb4196c24233a675f7ac1a0c1d8ca184f1 data/nef/recipes/cheese.json
 6e94ae8442cb5bb6e344654536c54f348274bc03 data/nef/recipes/chicken_from_nuggets.json
 eaf622a2af8107406113d0043d9547bd8464a13a data/nef/recipes/chicken_nugget.json
