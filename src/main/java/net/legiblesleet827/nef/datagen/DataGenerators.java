@@ -17,13 +17,17 @@ public class DataGenerators {
         DataGenerator gen = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-        gen.addProvider(new ModLanguageProviderEN(gen));
-        gen.addProvider(new ModBlockStateProvider(gen, existingFileHelper));
-        gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
+        if (event.includeClient()) {
+            gen.addProvider(new ModLanguageProviderEN(gen));
+            gen.addProvider(new ModBlockStateProvider(gen, existingFileHelper));
+            gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
+        }
 
-        gen.addProvider(new ModItemTagsProvider(gen, existingFileHelper));
+        if (event.includeServer()) {
+            gen.addProvider(new ModItemTagsProvider(gen, existingFileHelper));
 
-        gen.addProvider(new ModRecipeProvider(gen));
-        gen.addProvider(new ModLootTableProvider(gen));
+            gen.addProvider(new ModRecipeProvider(gen));
+            gen.addProvider(new ModLootTableProvider(gen));
+        }
     }
 }
